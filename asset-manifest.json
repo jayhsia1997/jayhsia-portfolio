@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/jayhsia-website/static/css/main.073c9b0a.css",
+    "main.js": "/jayhsia-website/static/js/main.f592f4e9.js",
+    "static/js/787.d2542943.chunk.js": "/jayhsia-website/static/js/787.d2542943.chunk.js",
+    "static/media/logo.svg": "/jayhsia-website/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/jayhsia-website/index.html",
+    "main.073c9b0a.css.map": "/jayhsia-website/static/css/main.073c9b0a.css.map",
+    "main.f592f4e9.js.map": "/jayhsia-website/static/js/main.f592f4e9.js.map",
+    "787.d2542943.chunk.js.map": "/jayhsia-website/static/js/787.d2542943.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.f592f4e9.js"
+  ]
+}
