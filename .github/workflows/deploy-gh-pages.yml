@@ -1,9 +1,11 @@
-name: deploy-gh-pages
+name: Build and Deploy GitHub Pages
 run-name: Deploy
 on:
   push:
     tags:
       - '*'
+permissions:
+  contents: write
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -17,8 +19,9 @@ jobs:
         with:
           cmd: install
       - name: Deploy to GitHub Pages
-        uses: borales/actions-yarn@v4
+        uses: JamesIves/github-pages-deploy-action@v4.4.2
         with:
-          cmd: run deploy
+          folder: build
+
 
 
