@@ -25,6 +25,10 @@ interface Props {
 const drawerWidth = 240;
 const navItems = [
 	{
+		name: "Home",
+		path: "/"
+	},
+	{
 		name: "About",
 		path: "/about"
 	}
@@ -68,61 +72,35 @@ const Navbar = (props: Props) => {
 	}
 
 	return (
-		<>
-			<Box sx={{ display: 'flex' }}>
-				<CssBaseline />
-				<AppBar component="nav">
-					<Toolbar>
-						<IconButton
-							color="inherit"
-							aria-label="open drawer"
-							edge="start"
-							onClick={handleDrawerToggle}
-							sx={{ mr: 2, display: { sm: 'none' } }}
-						>
-							<MenuIcon />
-						</IconButton>
-						<Typography
-							variant="h6"
-							component="div"
-							sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-							onClick={() => onNavItemClick("/")}
-						>
-							Jay Hsia
-						</Typography>
-						<Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-							{navItems.map((item) => (
-								<Button
-									key={item.name}
-									sx={{ color: '#fff' }}
-									onClick={() => onNavItemClick(item.path)}
-								>
-									{item.name}
-								</Button>
-							))}
-						</Box>
-					</Toolbar>
-				</AppBar>
-				<Box component="nav">
-					<Drawer
-						container={container}
-						variant="temporary"
-						open={mobileOpen}
-						onClose={handleDrawerToggle}
-						ModalProps={{
-							keepMounted: true, // Better open performance on mobile.
-						}}
-						sx={{
-							display: { xs: 'block', sm: 'none' },
-							'& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-						}}
-					>
-						{drawer}
-					</Drawer>
-				</Box>
-			</Box>
-			<Toolbar />
-		</>
+		<div className="navbar bg-base-100">
+			<div className="flex-1">
+				<a className="btn btn-ghost normal-case text-xl">Jay Hsia</a>
+			</div>
+			<div className="flex-none">
+				<ul className="menu menu-horizontal px-1">
+					{navItems.map((item) => (
+						<li key={item.name}>
+							<a onClick={() => onNavItemClick(item.path)}>{item.name}</a>
+						</li>
+					))}
+					<li>
+						<details>
+							<summary>
+								Theme
+							</summary>
+							<ul className="p-2 bg-base-100">
+								<li>
+									<a>Light</a>
+								</li>
+								<li>
+									<a>Dark</a>
+								</li>
+							</ul>
+						</details>
+					</li>
+				</ul>
+			</div>
+		</div>
 	);
 };
 
