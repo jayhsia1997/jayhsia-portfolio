@@ -8,13 +8,13 @@ const Home = () => {
   return (
     <div className={"h-screen bg-gray-300 text-gray-900"}>
       <Navbar/>
-      <div className={"container mx-auto mt-8"}>
+      <div className={"container max-w-7xl mx-auto mt-8"}>
         <div className={"flex flex-row"}>
           <div className={"basis-1/4 m-2"}>
             <div className={"container"}>
               <div className={"flex flex-col"}>
                 <div className={"avatar justify-center"}>
-                  <div className={"w-auto rounded-full"}>
+                  <div className={"w-48 rounded-full"}>
                     <img src={avatar} alt={"avatar"}/>
                   </div>
                 </div>
@@ -31,10 +31,18 @@ const Home = () => {
                     />
                   </a>
                   <a href={"https://github.com/jayhsia1997"} target={"_blank"} rel="noreferrer">
-                    <FontAwesomeIcon icon={brands("github")} size={"xl"} className={"m-2"}/>
+                    <FontAwesomeIcon
+                      icon={brands("github")}
+                      size={"xl"}
+                      className={"m-2"}
+                    />
                   </a>
                   <a href={"mailto:jayhsia1997@gmail.com"} target={"_blank"} rel="noreferrer">
-                    <FontAwesomeIcon icon={solid("envelope")} size={"xl"} className={"m-2"}/>
+                    <FontAwesomeIcon
+                      icon={solid("envelope")}
+                      size={"xl"}
+                      className={"m-2"}
+                    />
                   </a>
                 </div>
               </div>

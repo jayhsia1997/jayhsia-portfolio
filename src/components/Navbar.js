@@ -17,7 +17,6 @@ function classNames(...classes) {
 const Navbar = () => {
   const navigate = useNavigate();
   const onNavItemClick = (item) => {
-    console.log(item.href)
     navigate(item.href)
     navigation.forEach((navItem) => {
       navItem.current = navItem.name === item.name
@@ -49,12 +48,9 @@ const Navbar = () => {
                     size={"2xl"}
                     className={"block w-auto lg:hidden text-gray-300"}
                     onClick={() => {
-                      let item = navigation.find(
-                        (item) => {
-                          console.log(item)
-                          return item.href === "/" ? item : null
-                        }
-                      )
+                      let item = navigation.find((item) => {
+                        return item.href === "/" ? item : null
+                      })
                       onNavItemClick(item)
                     }}
                   />
@@ -63,12 +59,9 @@ const Navbar = () => {
                     size={"2xl"}
                     className={"hidden w-auto lg:block text-gray-300"}
                     onClick={() => {
-                      let item = navigation.find(
-                        (item) => {
-                          console.log(item)
-                          return item.href === "/" ? item : null
-                        }
-                      )
+                      let item = navigation.find((item) => {
+                        return item.href === "/" ? item : null
+                      })
                       onNavItemClick(item)
                     }}
                   />
